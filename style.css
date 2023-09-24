@@ -1,53 +1,66 @@
 body {
     font-family: Arial, sans-serif;
     margin: 40px;
-    background-color: #f4f4f4; /* light gray background for whole body */
+    background-color: #f4f4f4;
 }
 
 h1 {
-    color: #333; /* dark gray for main title */
+    color: #333;
 }
 
 .project {
-    background-color: #ffffff; /* white background for individual projects */
+    display: flex; /* makes it a flex container */
+    background-color: #ffffff;
     border: 1px solid #e1e1e1;
     padding: 20px;
     margin-top: 20px;
-    border-radius: 10px; /* rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
-    transition: transform 0.2s, box-shadow 0.2s; /* smooth hover transition */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 750px;
 }
 
 .project:hover {
-    transform: translateY(-5px); /* slight lift on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* increased shadow depth on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.project h2 {
-    margin-top: 0;
-    color: #444; /* dark gray for project titles */
-}
-
-.project-links a {
-    text-decoration: none; /* remove default underline */
-    color: #007BFF; /* link color (can change as desired) */
-    transition: color 0.2s; /* smooth color transition on hover */
-}
-
-.project-links a:hover {
-    color: #0056b3; /* slightly darker shade for hover effect */
+.project-content { /* New class for the right-side details of each project */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .project-logo {
-    float: left;               /* this will make the logo float to the left */
-    width: 80px;              /* adjust based on your actual logo size */
-    height: 80px;             /* adjust based on your actual logo size */
-    margin-right: 20px;       /* creates a gap between the logo and the adjacent content */
-    border-radius: 10px;      /* if you want rounded corners for the logos too */
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 10px;
 }
 
-.project::after {             /* this pseudo-element clears the float, ensuring layout integrity */
-    content: "";
-    display: table;
-    clear: both;
+.project h2, .project h3 {
+    margin-top: 0;
+    color: #444;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.2s;
+}
+
+.project-links a:hover {
+    color: #0056b3;
+}
+
+
+.portfolio-header {
+    display: flex;
+    align-items: center; /* This will ensure the title and the image are vertically centered next to each other */
+    gap: 20px; /* This will create a gap between the image and the title */
+}
+
+.profile-image {
+    width: 80px; /* You can adjust this as needed */
+    border-radius: 10px; /* To round the corners */
 }
