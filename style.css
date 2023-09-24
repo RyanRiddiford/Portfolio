@@ -38,3 +38,16 @@ h1 {
     color: #0056b3; /* slightly darker shade for hover effect */
 }
 
+.project-logo {
+    float: left;               /* this will make the logo float to the left */
+    width: 80px;              /* adjust based on your actual logo size */
+    height: 80px;             /* adjust based on your actual logo size */
+    margin-right: 20px;       /* creates a gap between the logo and the adjacent content */
+    border-radius: 10px;      /* if you want rounded corners for the logos too */
+}
+
+.project::after {             /* this pseudo-element clears the float, ensuring layout integrity */
+    content: "";
+    display: table;
+    clear: both;
+}
